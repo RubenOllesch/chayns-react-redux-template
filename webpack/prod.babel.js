@@ -14,8 +14,8 @@ export default {
         }),
         new AppcacheWebpackPlugin({
             cache: [
-                'https://api.chayns.net/css/',
-                'https://chayns-res.tobit.com/API/v4/js/chayns.min.js',
+                'https://api.chayns.net/css/v4.0',
+                'https://api.chayns-static.space/js/v4.0/chayns.min.js',
                 'https://polyfillsvc.tobit.com/polyfill.min.js?flags=gated&features=default,es6,Map'
             ],
             output: 'cache.manifest'

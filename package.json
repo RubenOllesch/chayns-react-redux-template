@@ -12,6 +12,7 @@
   "author": "Tobit.Software",
   "license": "ISC",
   "devDependencies": {
+    "@hot-loader/react-dom": "^16.8.4",
     "@types/chayns": "^3.1.1",
     "appcache-webpack-plugin": "^1.4.0",
     "autoprefixer": "^9.4.10",

@@ -15,8 +15,10 @@ try {
     console.log('\n---------------------------\nNo SSL Certificate found.\n---------------------------\n');
 }
 
+const baseConfig = getBaseConfig(true);
+
 export default {
-    ...getBaseConfig(true),
+    ...baseConfig,
     devServer: {
         host: '0.0.0.0',
         port: 8080,
@@ -29,7 +31,13 @@ export default {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
             'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
-        },
+        }
+    },
+    resolve: {
+        ...baseConfig.resolve,
+        alias: {
+            'react-dom': '@hot-loader/react-dom'
+        }
     },
     devtool: 'inline-source-map',
     plugins: [
@@ -44,7 +52,7 @@ export default {
         new webpack.DefinePlugin({
             __DEV__: true,
             __STAGING__: false,
-            __LIVE__: false,
+            __LIVE__: false
         })
     ]
 };

@@ -10,7 +10,7 @@
     "build:staging": "webpack -p --config ./webpack/staging.babel.js --mode development"
   },
   "author": "Tobit.Software",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@hot-loader/react-dom": "^16.8.4",
     "@types/chayns": "^3.1.1",

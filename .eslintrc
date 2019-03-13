@@ -14,18 +14,24 @@
   "rules": {
     "max-len": "off",
     "linebreak-style": "off",
-    "indent": "off",
+    "indent": ["error", 4, {
+      "SwitchCase": 1
+    }],
     "strict": 0,
-    "comma-dangle": "off",
-    "import/no-extraneous-dependencies": "off",
-    "react/jsx-tag-spacing": "off",
+    "comma-dangle": ["error", "never"],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    "react/jsx-tag-spacing": ["error", {
+      "beforeSelfClosing": "allow"
+    }],
     "react/jsx-indent": "off",
-    "react/jsx-indent-props": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "react/no-danger": "off",
-    "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "no-use-before-define": "off",
-    "react/prefer-stateless-function": "off"
+    "react/jsx-indent-props": "off"
   },
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "webpack": "base-config.js"
+    }
+  }
 }

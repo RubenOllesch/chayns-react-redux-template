@@ -23,7 +23,7 @@ export default {
         new webpack.DefinePlugin({
             __DEV__: false,
             __STAGING__: false,
-            __LIVE__: true,
+            __LIVE__: true
         })
     ]
 };

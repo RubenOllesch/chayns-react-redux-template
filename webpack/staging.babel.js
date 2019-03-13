@@ -24,7 +24,7 @@ export default {
         new webpack.DefinePlugin({
             __DEV__: false,
             __STAGING__: true,
-            __LIVE__: false,
-        }),
+            __LIVE__: false
+        })
     ]
 };
